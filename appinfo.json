@@ -4,7 +4,7 @@
         ""
     ],
     "companyName": "Johannes Baldinger",
-    "longName": "Fuzzy Zeit 2 Eco Plus Inverted",
+    "longName": "Fuzzy Time Jo",
     "projectType": "native",
     "resources": {
         "media": [
@@ -15,12 +15,17 @@
             },
             {
                 "file": "fonts/Roboto-Light.ttf",
-                "name": "ROBOTO_36",
+                "name": "ROBOTO_24",
                 "type": "font"
             },
             {
                 "file": "fonts/Roboto-Light.ttf",
-                "name": "ROBOTO_15",
+                "name": "ROBOTO_18",
+                "type": "font"
+            },
+            {
+                "file": "fonts/Roboto-Light.ttf",
+                "name": "ROBOTO_36",
                 "type": "font"
             },
             {
@@ -71,7 +76,7 @@
             }
         ]
     },
-    "shortName": "Fuzzy2EcoInverted",
+    "shortName": "FuzzyJo",
     "uuid": "acc37cb9-a7e6-487e-f6bc-4dd0f7ff5dca",
     "versionCode": 1,
     "versionLabel": "1.0.0",

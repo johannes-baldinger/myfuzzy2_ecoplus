@@ -76,13 +76,13 @@ static void update_time(struct tm* t) {
 }
 
 static void handle_bluetooth(bool connected) {
-	conn_text="?";
+	conn_text="? ";
 	if (connected) {
-		snprintf(conn_text, sizeof(conn_text), "C");
+		snprintf(conn_text, sizeof(conn_text), "&");
 //    s_data.bticon=gbitmap_create_with_resource(RESOURCE_ID_BT_ON);
 //	  bitmap_layer_set_bitmap(s_data.btlayer,s_data.bticon);
 	} else {
-		snprintf(conn_text, sizeof(conn_text), "X");
+		snprintf(conn_text, sizeof(conn_text), "&!");
 	}
 	text_layer_set_text(s_data.conn, conn_text);
 	if (initseq!=true) vibes_double_pulse();
@@ -101,7 +101,8 @@ static void do_init(void) {
   window_set_background_color(s_data.window, backcol);
   GFont font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_ROBOTO_36));
   GFont boldfont=fonts_load_custom_font(resource_get_handle(RESOURCE_ID_ROBOTO_BOLD_36));
-  GFont datumfont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_ROBOTO_15));
+  GFont datumfont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_ROBOTO_18));
+  GFont btfont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_ROBOTO_24));
   //GFont font = fonts_get_system_font(FONT_KEY_BITHAM_40_LIGHT);
   //GFont boldfont=fonts_get_system_font(FONT_KEY_BITHAM_40_BOLD);
   //GFont datumfont=fonts_get_system_font(FONT_KEY_BITHAM_24 );
@@ -118,8 +119,8 @@ static void do_init(void) {
   
   s_data.label3 = text_layer_create(GRect(0,91,frame.size.w,135));
   
-  s_data.conn = text_layer_create(GRect(0,frame.size.h-25,10,frame.size.h));
-  s_data.datum = text_layer_create(GRect(10,frame.size.h-25,frame.size.w-34,frame.size.h));
+  s_data.conn = text_layer_create(GRect(0,frame.size.h-28,19,frame.size.h));
+  s_data.datum = text_layer_create(GRect(20,frame.size.h-25,frame.size.w-34,frame.size.h));
   s_data.conbatt = text_layer_create(GRect(frame.size.w-33,frame.size.h-25,frame.size.w,frame.size.h));
     
   text_layer_set_background_color(s_data.label, backcol);
@@ -142,12 +143,12 @@ static void do_init(void) {
 	text_layer_set_font(s_data.label3, boldfont);
   text_layer_set_font(s_data.datum,datumfont);
   text_layer_set_font(s_data.conbatt,datumfont);
-  text_layer_set_font(s_data.conn,datumfont);
+  text_layer_set_font(s_data.conn,btfont);
   
   text_layer_set_text_alignment(s_data.label, GTextAlignmentLeft);
   text_layer_set_text_alignment(s_data.label2, GTextAlignmentLeft);
 	text_layer_set_text_alignment(s_data.label3, GTextAlignmentLeft);
-	text_layer_set_text_alignment(s_data.datum, GTextAlignmentCenter);
+	text_layer_set_text_alignment(s_data.datum, GTextAlignmentLeft);
 	text_layer_set_text_alignment(s_data.conbatt, GTextAlignmentLeft);
 	text_layer_set_text_alignment(s_data.conn, GTextAlignmentRight);
   layer_add_child(root_layer, text_layer_get_layer(s_data.label));

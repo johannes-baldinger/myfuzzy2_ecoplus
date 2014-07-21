@@ -51,10 +51,10 @@ void fuzzy_time_to_words(int hours, int minutes, char* words1, char* words2, cha
     return;
   };
   
-  if (minutes <= 3) {
+  if (minutes <= 2) {
     remaining1 -= append_string(words1, remaining1, "kurz");
 	remaining2 -= append_string(words2,remaining2,"nach");
-  } else if (minutes <= 8) {
+  } else if (minutes <= 7) {
     remaining1 -= append_string(words1, remaining1, "fünf");
 	remaining2 -= append_string(words2,remaining2,"nach");
   } else if (minutes <= 12) {
@@ -66,11 +66,11 @@ void fuzzy_time_to_words(int hours, int minutes, char* words1, char* words2, cha
   } else if (minutes <= 22) {
     remaining1 -= append_string(words1, remaining1, "zwanzig");
 	remaining2 -= append_string(words2,remaining2,"nach");
-  } else if (minutes <= 28) {
+  } else if (minutes <= 27) {
     remaining1 -= append_string(words1, remaining1, "fünf"); 
 	remaining2 -= append_string(words2,remaining2,"vor ");
 	remaining2 -= append_string(words2,remaining2,"hb");
-  } else if (minutes <= 29) {
+  } else if (minutes <= 28) {
     remaining1 -= append_string(words1, remaining1, "kurz");
 	remaining2 -= append_string(words2,remaining2,"vor ");
 	remaining2 -= append_string(words2,remaining2,"hb");
@@ -84,19 +84,19 @@ void fuzzy_time_to_words(int hours, int minutes, char* words1, char* words2, cha
     remaining1 -= append_string(words1, remaining1, "fünf");
 	remaining2 -= append_string(words2, remaining2, "nach ");
 	remaining2-= append_string(words2, remaining2, "hb");
-  } else if (minutes <= 43) {
+  } else if (minutes <= 42) {
     remaining1 -= append_string(words1, remaining1, "zwanzig");
 	remaining2 -= append_string(words2, remaining2, "vor");
-  } else if (minutes <= 48) {
+  } else if (minutes <= 47) {
     remaining1 -= append_string(words1, remaining1, "viertel");
 	remaining2 -= append_string(words2, remaining2, "vor");
-  } else if (minutes <= 53) {
+  } else if (minutes <= 52) {
     remaining1 -= append_string(words1, remaining1, "zehn");
 	remaining2-= append_string(words2, remaining2, "vor");
   } else if (minutes <= 57) {
     remaining1 -= append_string(words1, remaining1, "fünf");
 	remaining2 -= append_string(words2, remaining2, "vor");
-  } else if (minutes <= 59) {
+  } else if (minutes <= 58) {
     remaining1 -= append_string(words1, remaining1, "kurz");
 	remaining2 -= append_string(words2, remaining2, "vor");
   }
