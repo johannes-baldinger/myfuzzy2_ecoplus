@@ -46,12 +46,26 @@ static void handle_battery(BatteryChargeState charge_state) {
 	  //bitmap_layer_set_bitmap(s_data.battlayer,s_data.batticon);
   } else {
 	battload=false;
+    if (charge_state.charge_percent>80) {
+      battery_text= ")((";
+    }else if (charge_state.charge_percent>60) {
+      battery_text= "+((";
+    }else if (charge_state.charge_percent>50) {
+      battery_text= "+$(";
+    }else if (charge_state.charge_percent>30) {
+      battery_text= "+#(";
+    }else if (charge_state.charge_percent>20) {
+      battery_text= "+#$";
+    }else if (charge_state.charge_percent<=20) {
+      battery_text= "+#*";
+    }
+
 	  //if (charge_state.charge_percent>80)  s_data.batticon=gbitmap_create_with_resource(RESOURCE_ID_batt_100);
 	  //if (charge_state.charge_percent>60)  s_data.batticon=gbitmap_create_with_resource(RESOURCE_ID_batt_80);
 	   //if (charge_state.charge_percent>40)  s_data.batticon=gbitmap_create_with_resource(RESOURCE_ID_batt_60);
 	   //if (charge_state.charge_percent>20)  s_data.batticon=gbitmap_create_with_resource(RESOURCE_ID_batt_40);
 	   //if (charge_state.charge_percent<=20)  s_data.batticon=gbitmap_create_with_resource(RESOURCE_ID_batt_20);
-    snprintf(battery_text, sizeof(battery_text), "%d%%", charge_state.charge_percent);
+  //  snprintf(battery_text, sizeof(battery_text), "%d%%", charge_state.charge_percent);
   }
   	text_layer_set_text(s_data.conbatt, battery_text);
 	 //bitmap_layer_set_bitmap(s_data.battlayer,s_data.batticon);
