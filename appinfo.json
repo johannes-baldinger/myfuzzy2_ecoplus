@@ -1,75 +1,81 @@
 {
-    "versionLabel": "1.0.0",
-    "uuid": "acc37cb9-a7e6-487e-f6bc-4dd0f7ff5dca",
     "appKeys": {},
-    "longName": "Fuzzy Zeit 2 Eco Plus Inverted",
-    "versionCode": 1,
     "capabilities": [
         ""
     ],
-    "shortName": "Fuzzy2EcoInverted",
-    "companyName": "Andreas Vaeth",
-    "watchapp": {
-        "watchface": true
-    },
+    "companyName": "Johannes Baldinger",
+    "longName": "Fuzzy Zeit 2 Eco Plus Inverted",
+    "projectType": "native",
     "resources": {
         "media": [
             {
-                "type": "png",
-                "name": "bt_conn",
-                "file": "images/bluetooth.png"
+                "file": "fonts/Roboto-Bold.ttf",
+                "name": "ROBOTO_BOLD_36",
+                "type": "font"
             },
             {
-                "type": "png",
-                "name": "ICON_BATT_LADE",
-                "file": "images/batt_lade.png"
+                "file": "fonts/Roboto-Light.ttf",
+                "name": "ROBOTO_36",
+                "type": "font"
             },
             {
-                "type": "png",
-                "name": "batt_100",
-                "file": "images/batt_100.png"
+                "file": "fonts/Roboto-Light.ttf",
+                "name": "ROBOTO_15",
+                "type": "font"
             },
             {
-                "type": "png",
-                "name": "batt_80",
-                "file": "images/batt_80.png"
+                "file": "images/bluetoothNO.png",
+                "name": "bt_off",
+                "type": "png"
             },
             {
-                "type": "png",
-                "name": "batt_60",
-                "file": "images/batt_60.png"
+                "file": "images/bluetooth2.png",
+                "name": "BT_ON",
+                "type": "png"
             },
             {
-                "type": "png",
-                "name": "batt_40",
-                "file": "images/batt_40.png"
-            },
-            {
-                "type": "png",
-                "name": "batt_20",
-                "file": "images/batt_20.png"
-            },
-            {
-                "type": "font",
-                "name": "FONT_BOLDFONT_32",
-                "file": "fonts/segoescb.ttf"
-            },
-            {
-                "type": "font",
-                "name": "FONT_TEXTFONT_24",
-                "file": "fonts/segoesc.ttf"
-            },
-            {
-                "type": "font",
-                "name": "FONT_SMALLFONT_14",
-                "file": "fonts/opensansl.ttf"
-            },
-            {
+                "file": "images/menu_icon_fuzzy_watch.png",
                 "menuIcon": true,
-                "type": "png",
                 "name": "IMAGE_MENU_ICON",
-                "file": "images/menu_icon_fuzzy_watch.png"
+                "type": "png"
+            },
+            {
+                "file": "images/batt_20.png",
+                "name": "batt_20",
+                "type": "png"
+            },
+            {
+                "file": "images/batt_40.png",
+                "name": "batt_40",
+                "type": "png"
+            },
+            {
+                "file": "images/batt_60.png",
+                "name": "batt_60",
+                "type": "png"
+            },
+            {
+                "file": "images/batt_80.png",
+                "name": "batt_80",
+                "type": "png"
+            },
+            {
+                "file": "images/batt_100.png",
+                "name": "batt_100",
+                "type": "png"
+            },
+            {
+                "file": "images/batt_lade.png",
+                "name": "ICON_BATT_LADE",
+                "type": "png"
             }
         ]
+    },
+    "shortName": "Fuzzy2EcoInverted",
+    "uuid": "acc37cb9-a7e6-487e-f6bc-4dd0f7ff5dca",
+    "versionCode": 1,
+    "versionLabel": "1.0.0",
+    "watchapp": {
+        "watchface": true
     }
 }

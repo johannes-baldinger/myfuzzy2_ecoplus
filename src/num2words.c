@@ -23,17 +23,15 @@ static size_t append_string(char* buffer, const size_t length, const char* str) 
   return (length > written) ? written : length;
 }
 
-void fuzzy_time_to_words(int hours, int minutes, char* words1, char* words2, char* words3, char* words4, size_t length) {
+void fuzzy_time_to_words(int hours, int minutes, char* words1, char* words2, char* words3,  size_t length) {
   
   
   size_t remaining1 = length;
   size_t remaining2 = length;
   size_t remaining3 = length;
-  size_t remaining4 = length;
   memset(words1, 0, length);
 	memset(words2,0,length);
 	memset(words3,0,length);
-	memset(words4,0,length);
   
   if (minutes == 0) {
 	  
@@ -71,21 +69,21 @@ void fuzzy_time_to_words(int hours, int minutes, char* words1, char* words2, cha
   } else if (minutes <= 28) {
     remaining1 -= append_string(words1, remaining1, "fünf"); 
 	remaining2 -= append_string(words2,remaining2,"vor ");
-	remaining2 -= append_string(words2,remaining2,"halb");
+	remaining2 -= append_string(words2,remaining2,"hb");
   } else if (minutes <= 29) {
     remaining1 -= append_string(words1, remaining1, "kurz");
 	remaining2 -= append_string(words2,remaining2,"vor ");
-	remaining2 -= append_string(words2,remaining2,"halb");
+	remaining2 -= append_string(words2,remaining2,"hb");
   } else if (minutes <= 30) {
     remaining2 -= append_string(words2, remaining2, "halb");
   } else if (minutes <= 32) {
     remaining1 -= append_string(words1, remaining1, "kurz");
 	remaining2 -= append_string(words2, remaining2, "nach ");
-	remaining2 -= append_string(words2, remaining2, "halb");
+	remaining2 -= append_string(words2, remaining2, "hb");
   } else if (minutes <= 37) {
     remaining1 -= append_string(words1, remaining1, "fünf");
 	remaining2 -= append_string(words2, remaining2, "nach ");
-	remaining2-= append_string(words2, remaining2, "halb");
+	remaining2-= append_string(words2, remaining2, "hb");
   } else if (minutes <= 43) {
     remaining1 -= append_string(words1, remaining1, "zwanzig");
 	remaining2 -= append_string(words2, remaining2, "vor");
